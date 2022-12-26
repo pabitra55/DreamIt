@@ -19,7 +19,8 @@ export class AngularComponent implements OnInit {
   externalList = [
     { contentTitle: 'W3Schools', siteLink: 'https://www.w3schools.com/' },
     { contentTitle: 'W3Resource', siteLink: 'https://www.w3resource.com/' },
-  ]
+  ];
+  
   constructor() { }
 
   ngOnInit(): void {
