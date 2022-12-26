@@ -1,0 +1,26 @@
+<!-- <div class="card-container">
+    <ng-container *ngFor="let item of courseList">
+        <div class="card" style="width: 18rem;">
+            <img [src]="item.img" class="card-img-top" [alt]="item">
+            <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.desc}}</p>
+                <a [routerLink]="item.path" class="btn btn-primary">Go to {{item.title}}</a>
+            </div>
+        </div>
+    </ng-container>
+</div> -->
+<div class="row">
+    <ng-container *ngFor="let item of courseList">
+        <div class="col-3 mb-3">
+            <div class="card">
+                <img [src]="item.img" class="card-img-top" [alt]="item">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <p class="card-text">{{item.desc}}</p>
+                    <a [routerLink]="item.path" class="btn btn-primary">Go to {{item.title}}</a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

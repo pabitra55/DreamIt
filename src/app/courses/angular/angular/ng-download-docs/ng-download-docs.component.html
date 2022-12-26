@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Documents Desc</th>
+            <th scope="col">Format</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of documentList; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{item.desc}}</td>
+            <td>.{{item.type}}</td>
+            <td>
+                <div class="d-flex">
+                    <a [href]="item.downloadPath" download="newname.docx">
+                        <i class="fa-solid fa-download cur-p" (click)="downloadDoc(item)"></i>
+                    </a>
+                    <!-- <a [href]="item.downloadPath" target="_blank">
+                        <i class="fa-solid fa-eye cur-p" (click)="viewDoc(item)"></i>
+                    </a> -->
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
