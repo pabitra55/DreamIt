@@ -14,7 +14,8 @@ export class AngularComponent implements OnInit {
     { contentTitle: 'Most Used Angular Packages', path: '' },
     { contentTitle: 'Video Tutorials', path: '' },
     { contentTitle: 'Download Docs', path: 'download-docs' },
-  ]
+  ];
+  
   externalList = [
     { contentTitle: 'W3Schools', siteLink: 'https://www.w3schools.com/' },
     { contentTitle: 'W3Resource', siteLink: 'https://www.w3resource.com/' },
