@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="shadow-sm p-3 mt-3 mb-5 bg-body rounded">
+        <h4 class="text-warning">
+            Welcome
+        </h4>
+    </div>
+    <div class="bg-black mb-3 mt-3 copy-to-clipboard-container">
+        <p class="p-2 text-info d-inline-block" #copyContent [innerHTML]="program1">
+        </p>
+
+        <app-copy-to-clipboard [inputElement]="copyContent"></app-copy-to-clipboard>
+    </div>
+</div>

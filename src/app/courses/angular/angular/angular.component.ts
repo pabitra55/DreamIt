@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AngularComponent implements OnInit {
   showLeftBar: boolean = true;
   contentList = [
+    { contentTitle: 'Exercise and programs', path: 'ng-exercises' },
     { contentTitle: 'Real Time Usages', path: 'realtimeusage' },
     { contentTitle: 'Interview Q&A', path: 'interviewQA' },
     { contentTitle: 'Installation Guide', path: 'installation-guide' },

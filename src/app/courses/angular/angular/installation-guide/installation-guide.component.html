@@ -4,119 +4,174 @@
             alt="">
     </div>
 </div> -->
+<div class="container">
 
-<div class="alert alert-primary mt-5" role="alert">
-    <h5>
-        Angular Installation
-    </h5>
+    <div class="alert alert-primary mt-5" role="alert">
+        <h5>
+            Angular Installation
+        </h5>
+    </div>
+
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 1</span>
+        <ul>
+            <div>
+                Download Nodejs
+            </div>
+            <a href=" https://nodejs.org/en/download/" target="_blank"> https://nodejs.org/en/download/</a>
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 2</span>
+        <ul>
+            <div>
+                Check if Nodejs is Installed ?
+            </div>
+            <div>
+                npm -v
+            </div>
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 3</span>
+        <ul>
+            <div>
+                Check if NPM is installed? <strong>(NPM:- Node Package Manager)</strong>
+            </div>
+            <div>
+                npm -v
+            </div>
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 4</span>
+        <ul>
+            <div>
+                Install Angular <strong>CLI (Command Line Interface)</strong>
+            </div>
+            <div>
+                npm install -g @angular/cli
+            </div>
+            <div>
+                npm install -g @angular/cli@latest
+            </div>
+            <div>
+                npm install -g @angular/cli@9 <strong>Specific to verson</strong>
+            </div>
+
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 5</span>
+        <ul>
+            <div>
+                Check if angular CLI is installed?
+            </div>
+            <div>
+                ng v
+            </div>
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 6</span>
+        <ul>
+            <div>
+                Create a new angular project
+            </div>
+            <div>
+                ng new <{{'project - name'}}>
+            </div>
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 8</span>
+        <ul>
+            <div>
+                Run the project
+            </div>
+            <div>
+                Go to the project directory
+            </div>
+            <div>
+                ng serve (project get up and run in server)
+            </div>
+        </ul>
+    </li>
+    <li class="remove-bullets-li">
+        <span class="badge bg-primary mb-3">Step 9</span>
+        <ul>
+            <div>
+                Open your browser (any) and open the given URL
+            </div>
+            <div>
+                <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
+            </div>
+            <div>
+                ng serve (project get up and run in server)
+            </div>
+        </ul>
+    </li>
+
+    <span class="badge bg-danger">
+        Note :
+    </span>
+    &nbsp;
+    <span>
+        <strong>
+            ng serve command launches the angular application, watches your file changes and rebuilds the app when you
+            make
+            changes to those files
+        </strong>
+    </span>
+
+    <div class="alert alert-primary mt-5" role="alert">
+        <h5>
+            Bootstrap Installation
+        </h5>
+    </div>
+
+    <li class="remove-bullets-li">
+        <span class="badge bg-info mb-3">Step 1</span>
+        <ul>
+            <div>
+                <p>
+                    In the following steps we will add bootstrap 5 into our angular project
+                </p>
+                <p>
+                    There are numerous ways to install bootstrap in your angular project
+                </p>
+            </div>
+            <ol>
+                <li>You can install <strong>Bootstrap</strong> using npm install command.</li>
+                <li>Download Bootstrap file from its official site and keep them in the <strong>src/assets</strong>
+                    folder of angular project folder
+                </li>
+                <li>By using Bootstrap CDN</li>
+            </ol>
+            <p>Let's Start With <strong>NPM</strong> way Go to Command Line Interface and install latest
+                <strong>Bootstrap</strong> through npm
+            </p>
+            <div class="bg-black mb-3 mt-3 copy-to-clipboard-container">
+                <p class="p-2 text-info d-inline-block" #copyContent_1>$ npm install Bootstrap </p> <app-copy-to-clipboard
+                    [inputElement]="copyContent_1"></app-copy-to-clipboard>
+            </div>
+            <p>
+                The above command will add bootstrap package in <strong>package.json</strong> file. No need to worry all
+                these jobs will be performed by angular <strong>CLI</strong> while installation
+            </p>
+            <p>
+                The Bootstrap assets installed and added into <strong>node_modules/bootstrap</strong> folder
+            </p>
+        </ul>
+        <span class="badge bg-info mb-3">Step 2</span>
+        <ul>
+            <p>Now we need to <strong> import</strong> css in to global <strong>style.css/style.scss</strong> </p>
+            <p>Open the style.scss file from your project folder and try to import <strong>bootstrap.css</strong> file
+            </p>
+            <div class="bg-black mb-3 mt-3 copy-to-clipboard-container">
+                <p class="p-2 text-info d-inline-block" #copyContent_2>@import "~bootstrap/dist/css/bootstrap.css" </p>
+                <app-copy-to-clipboard [inputElement]="copyContent_2"></app-copy-to-clipboard>
+            </div>
+        </ul>
+    </li>
 </div>
-
-<li>
-    <span class="badge bg-primary">Step 1</span>
-    <ul>
-        <div>
-            Download Nodejs
-        </div>
-        <a href=" https://nodejs.org/en/download/" target="_blank"> https://nodejs.org/en/download/</a>
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 2</span>
-    <ul>
-        <div>
-            Check if Nodejs is Installed ?
-        </div>
-        <div>
-            npm -v
-        </div>
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 3</span>
-    <ul>
-        <div>
-            Check if NPM is installed? <strong>(NPM:- Node Package Manager)</strong>
-        </div>
-        <div>
-            npm -v
-        </div>
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 4</span>
-    <ul>
-        <div>
-            Install Angular <strong>CLI (Command Line Interface)</strong>
-        </div>
-        <div>
-            npm install -g @angular/cli
-        </div>
-        <div>
-            npm install -g @angular/cli@latest
-        </div>
-        <div>
-            npm install -g @angular/cli@9 <strong>Specific to verson</strong>
-        </div>
-
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 5</span>
-    <ul>
-        <div>
-            Check if angular CLI is installed?
-        </div>
-        <div>
-            ng v
-        </div>
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 6</span>
-    <ul>
-        <div>
-            Create a new angular project
-        </div>
-        <div>
-            ng new <{{'project - name'}}>
-        </div>
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 8</span>
-    <ul>
-        <div>
-            Run the project
-        </div>
-        <div>
-            Go to the project directory
-        </div>
-        <div>
-            ng serve (project get up and run in server)
-        </div>
-    </ul>
-</li>
-<li>
-    <span class="badge bg-primary">Step 9</span>
-    <ul>
-        <div>
-            Open your browser (any) and open the given URL
-        </div>
-        <div>
-            <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>
-        </div>
-        <div>
-            ng serve (project get up and run in server)
-        </div>
-    </ul>
-</li>
-
-<span class="badge bg-danger">
-    Note :
-</span>
-&nbsp;
-<span>
-    <strong>
-        ng serve command launches the angular application, watches your file changes and rebuilds the app when you make changes to those files
-    </strong>
-</span>

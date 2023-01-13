@@ -1,24 +1,48 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Login</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="dashboard/angular">Angular</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="dashboard/javascript">Javascript</a>
-                </li>
+<mat-toolbar color="primary">
+    <!-- <mat-toolbar-row> -->
+    <nav class="navbar navbar-expand-lg justify-content-between d-flex">
+        <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" mat-ripple>
+                        <div aria-current="page" routerLink="dashboard/angular"> Angular</div>
+                    </li>
+                    <li class="nav-item" mat-ripple>
+                        <div routerLink="dashboard/javascript">Javascript</div>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+
+            </div>
         </div>
-    </div>
-</nav>
+
+        <mat-menu #menu="matMenu">
+            <ng-container>
+                <mat-radio-group (change)="triggerColor($event)" [(ngModel)]="currentColor"
+                    *ngFor="let item of colorList" aria-labelledby="example-radio-group-label" mat-menu-item>
+                    <mat-radio-button [value]="item.themeId">
+                        {{item.themeName}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </ng-container>
+        </mat-menu>
+        <div class="d-flex">
+            <button class="theme-change-btn m-1" [matMenuTriggerFor]="menu" mat-mini-fab
+                aria-label="Example icon button with a home icon">
+                <mat-icon> format_paint</mat-icon>
+            </button>
+            <div class="cur-p d-flex align-items-center" aria-current="page" routerLink="auth"> Login &nbsp; <mat-icon> vpn_key
+                </mat-icon></div>
+        </div>
+    </nav>
+
+</mat-toolbar>

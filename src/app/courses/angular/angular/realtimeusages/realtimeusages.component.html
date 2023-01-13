@@ -1,1 +1,25 @@
-<p>realtimeusages works!</p>
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td>Age</td>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-template #recursiveList let-dataSource>
+            <ng-container *ngFor="let item of dataSource">
+                <tr>
+                    <span (click)="visibility(item)" [style.marginLeft.px]="item.nodeLevel * 15">{{!item.isVisible ? 'open' : 'close'}}</span>
+                    <td>{{item.name}}</td>
+                </tr>
+                <ng-container *ngIf="item.children?.length > 0">
+                    <ng-container *ngIf="item.isVisible">
+                        <ng-container
+                            *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </ng-template>
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: dataSource }"></ng-container>
+    </tbody>
+</table>
